@@ -27,6 +27,21 @@ submitButton.addEventListener('click', () => {
 	
     const playerThrow = playerChoice.value;
     const computerThrow = getComputerThrow();
+	
+    resultsSection.classList.remove('none');
+    computerThrowDisplay.textContent = computerThrow;
+	
+    const outcome = doesUserWin(playerThrow, computerThrow);
+    outcomeDisplay.textContent = outcome;
+	
+    if (outcome === 'win') winCount++;
+    if (outcome === 'loss') loseCount++;
+    if (outcome === 'draw') drawCount++;
+
+    winCountDisplay.textContent = winCount;
+    loseCountDisplay.textContent = loseCount;
+    drawCountDisplay.textContent = drawCount;
+	
     console.log(playerThrow, computerThrow);
     console.log(doesUserWin(playerThrow, computerThrow));
 });
