@@ -28,6 +28,5 @@ submitButton.addEventListener('click', () => {
     const playerThrow = playerChoice.value;
     const computerThrow = getComputerThrow();
     console.log(playerThrow, computerThrow);
-	
     console.log(doesUserWin(playerThrow, computerThrow));
 });
