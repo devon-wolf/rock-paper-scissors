@@ -12,3 +12,12 @@ export function computerThrow(value) {
 function computerThrowCriteria() {
     return Math.ceil(Math.random() * 3);
 }
+
+export function doesUserWin(userThrow, computerThrow) {
+    if (userThrow === computerThrow) {
+        return 'draw';
+    }
+    else {
+        return 'needs more consideration';
+    }
+}

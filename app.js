@@ -1,5 +1,6 @@
 import {
-    getComputerThrow
+    getComputerThrow,
+    doesUserWin
 } from './gameUtils.js';
 
 // buttons
@@ -26,5 +27,7 @@ submitButton.addEventListener('click', () => {
 	
     const playerThrow = playerChoice.value;
     const computerThrow = getComputerThrow();
-    // console.log(playerThrow, computerThrow);
+    console.log(playerThrow, computerThrow);
+	
+    console.log(doesUserWin(playerThrow, computerThrow));
 });
