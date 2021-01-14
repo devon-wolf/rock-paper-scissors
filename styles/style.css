@@ -7,8 +7,54 @@ body, html {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	font-family: Arial;
 }
 
 .none {
 	display: none;
+}
+
+header {
+	background-color: turquoise;
+	padding: 1rem;
+	text-align: center;
+}
+
+main {
+	background-color: rgb(145, 170, 111);
+	padding: 1rem;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+section {
+	background-color: lavender;
+	padding: 1rem;
+}
+
+footer {
+	background-color: lightslategray;
+	color: lightgray;
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+h1, h2 {
+	margin: 0;
+	font-family: monospace;
+}
+
+button {
+	margin: 1rem;
+	font-family: monospace;
+}
+
+#stats {
+	font-style: italic;
+}
+
+#computer-throw, #outcome, #stats span {
+	font-weight: bold;
 }

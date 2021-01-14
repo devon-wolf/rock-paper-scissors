@@ -42,4 +42,3 @@ function checkForLose(userThrow, computerThrow) {
             return 'something went wrong';
     }
 }
-

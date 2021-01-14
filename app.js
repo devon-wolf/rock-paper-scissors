@@ -1,7 +1,11 @@
 import {
     getComputerThrow,
-    doesUserWin
+    doesUserWin,
 } from './gameUtils.js';
+
+import {
+    updateStats
+} from './displayUtils.js';
 
 // buttons
 const submitButton = document.getElementById('submit-button');
@@ -11,10 +15,6 @@ const resetButton = document.getElementById('reset-button');
 const resultsSection = document.querySelector('.results');
 const computerThrowDisplay = document.getElementById('computer-throw');
 const outcomeDisplay = document.getElementById('outcome');
-const statsDisplay = document.getElementById('stats');
-const winCountDisplay = document.getElementById('win-count');
-const loseCountDisplay = document.getElementById('lose-count');
-const drawCountDisplay = document.getElementById('draw-count');
 
 // initialize state
 let winCount = 0;
@@ -32,16 +32,35 @@ submitButton.addEventListener('click', () => {
     computerThrowDisplay.textContent = computerThrow;
 	
     const outcome = doesUserWin(playerThrow, computerThrow);
-    outcomeDisplay.textContent = outcome;
 	
-    if (outcome === 'win') winCount++;
-    if (outcome === 'loss') loseCount++;
-    if (outcome === 'draw') drawCount++;
+    if (outcome === 'win') {
+        winCount++;
+        outcomeDisplay.textContent = 'You win!';
+    }
+    if (outcome === 'loss') {
+        loseCount++;
+        outcomeDisplay.textContent = 'You lost.';
+    }
+    if (outcome === 'draw') {
+        drawCount++;
+        outcomeDisplay.textContent = 'It\'s a draw.';
+    }
+  
+    updateStats(winCount, loseCount, drawCount);
+});
 
-    winCountDisplay.textContent = winCount;
-    loseCountDisplay.textContent = loseCount;
-    drawCountDisplay.textContent = drawCount;
+// reset button
+const resetCounter = document.getElementById('reset-counter');
+const resetDisplay = document.getElementById('reset-display');
+let resetCount = 0;
+
+resetButton.addEventListener('click', () => {
+    winCount = 0;
+    loseCount = 0;
+    drawCount = 0;
+    updateStats(winCount, loseCount, drawCount);
 	
-    console.log(playerThrow, computerThrow);
-    console.log(doesUserWin(playerThrow, computerThrow));
+    resetDisplay.classList.remove('none');
+    resetCount++;
+    resetCounter.textContent = resetCount;
 });

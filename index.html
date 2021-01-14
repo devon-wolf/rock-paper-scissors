@@ -17,7 +17,11 @@
     <main>
         <section class="instructions">
             <h2>How to Play</h2>
-            <p>Pick one, click "shoot" - the computer will pick its throw at random. See if you win.</p>
+            <p>Pick one, click "shoot."</p>
+            <p>The computer will pick its throw at random.</p>
+            <p><b>Rock</b> beats <b>scissors</b>.</p>
+            <p><b>Scissors</b> beats <b>paper</b>.</p>
+            <p><b>Paper</b> beats <b>rock</b>.</p>
         </section>
 
         <section class="game">
@@ -44,7 +48,7 @@
         </section>
 
         <section class="results none">
-            <div id="computer-throw"></div>
+            <p>The computer threw <span id="computer-throw"></span>.</p>
             <div id="outcome"></div>
             <div id="stats">
                 <p>Number of times you won: <span id="win-count"></span></p>
@@ -57,7 +61,8 @@
     <footer>
         <div class="button">
             <button id="reset-button">Reset stats?</button>
-        </div> 
+        </div>
+        <div class="none" id="reset-display">Resets: <span id="reset-counter"></span></div>
     </footer>
 
     <script type="module" src="app.js"></script>
