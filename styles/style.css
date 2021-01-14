@@ -11,6 +11,13 @@ body, html {
 	color: rgb(31, 41, 41);
 }
 
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: rgb(164, 170, 177);
+}
+
 .none {
 	display: none;
 }
