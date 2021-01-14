@@ -27,18 +27,19 @@
         <section class="game">
             <div class="choices">
                 <label>
-                    Rock
-                    <input type="radio" name="rps" value="rock">
+                    <input type="radio" name="rps" value="rock" class="none">
+                    <div class="rock">ROCK</div>
                 </label>
 
                 <label>
-                    Paper
-                    <input type="radio" name="rps" value="paper">
+                    <input type="radio" name="rps" value="paper" class="none">
+                    <div class="paper">PAPER</div>
+
                 </label>
 
                 <label>
-                    Scissors
-                    <input type="radio" name="rps" value="scissors">
+                    <input type="radio" name="rps" value="scissors" class="none">
+                    <div class="scissors">SCISSORS</div>
                 </label>
             </div>
             
@@ -48,12 +49,12 @@
         </section>
 
         <section class="results none">
-            <p>The computer threw <span id="computer-throw"></span>.</p>
+            <p>The computer chose <span id="computer-throw"></span>.</p>
             <div id="outcome"></div>
             <div id="stats">
-                <p>Number of times you won: <span id="win-count"></span></p>
-                <p>Number of times you lost: <span id="lose-count"></span></p>
-                <p>Number of draws: <span id="draw-count"></span></p>
+                <span>Number of times you won: <span id="win-count"></span></span><br>
+                <span>Number of times you lost: <span id="lose-count"></span></span><br>
+                <span>Number of draws: <span id="draw-count"></span></span>
             </div>
         </section>
     </main>

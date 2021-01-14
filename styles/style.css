@@ -7,7 +7,8 @@ body, html {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	font-family: Arial;
+	font-family: Calibri;
+	color: rgb(31, 41, 41);
 }
 
 .none {
@@ -15,30 +16,32 @@ body, html {
 }
 
 header {
-	background-color: turquoise;
+	background-color: lightslategray;
 	padding: 1rem;
 	text-align: center;
+	color: rgb(31, 41, 41);
+	text-shadow: rgba(240, 248, 255, 0.5) .5px .5px;
 }
 
 main {
-	background-color: rgb(145, 170, 111);
+	background-color: rgb(164, 170, 177);
 	padding: 1rem;
-	display: flex;
-	justify-content: space-evenly;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
 section {
-	background-color: lavender;
 	padding: 1rem;
 }
 
 footer {
 	background-color: lightslategray;
+	font-size: .75rem;
 	color: lightgray;
 	padding: 1rem;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 }
 
 h1, h2 {
@@ -53,8 +56,67 @@ button {
 
 #stats {
 	font-style: italic;
+	margin-top: 1rem;
 }
 
-#computer-throw, #outcome, #stats span {
+#computer-throw, #outcome, #win-count, #lose-count, #draw-count {
 	font-weight: bold;
+}
+
+.instructions, .results {
+	background-color: rgba(240, 248, 255, 0.5);
+	border-radius: 5px;
+	box-shadow: rgba(47, 79, 79, 0.5) .5rem .5rem;
+}
+
+.game {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.choices {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+label {
+	margin: 1rem;
+}
+
+label div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: monospace;
+	box-shadow: rgba(47, 79, 79, 0.5) .5rem .5rem;
+}
+
+input[type=radio]:checked + div {
+	border: solid 2px indigo;
+}
+
+.rock {
+	width: 100px;
+	height: 100px;
+	background-color: darkslategray;
+	border-radius: 45px;
+	color: lightgray;
+}
+
+.paper {
+	width: 100px;
+	height: 100px;
+	background-color: papayawhip;
+	border-radius: 5px;
+}
+
+.scissors {
+	width: 100px;
+	height: 100px;
+	background-color: silver;
+	border-radius: 30px;
+	color: darkslategray;
 }
