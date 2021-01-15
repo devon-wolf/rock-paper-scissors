@@ -15,6 +15,11 @@
     </header>
     
     <main>
+        <section class="choices computer-section">
+            <div class="rock none" id="computer-shape">ROCK</div>
+            <!-- <div class="paper">PAPER</div>
+            <div class="scissors">SCISSORS</div> -->
+        </section>
         <section class="instructions">
             <h2>How to Play</h2>
             <p>Pick one, click "shoot."</p>
@@ -48,9 +53,9 @@
             </div> 
         </section>
 
-        <section class="results none">
-            <p>The computer chose <span id="computer-throw"></span>.</p>
-            <div id="outcome"></div>
+        <section class="results">
+            <p id="computer-statement" class="none">The computer chose <span id="computer-throw"></span>.</p>
+            <div id="outcome" class="none"></div>
             <div id="stats">
                 <span>Number of times you won: <span id="win-count"></span></span><br>
                 <span>Number of times you lost: <span id="lose-count"></span></span><br>
