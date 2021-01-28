@@ -6,15 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Document</title>
+    <title>Rock || Paper || Scissors</title>
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <h1>Rock || Paper || Scissors</h1>
+    </header>
     
-    <main></main>
+    <main>
+        <section class="instructions">
+            <h2>How to Play</h2>
+            <p>Pick one, click "shoot."</p>
+            <p>The computer will pick its throw at random.</p>
+            <p><b>Rock</b> beats <b>scissors</b>.</p>
+            <p><b>Scissors</b> beats <b>paper</b>.</p>
+            <p><b>Paper</b> beats <b>rock</b>.</p>
+        </section>
+
+        <section class="game">
+            <div class="choices">
+                <label>
+                    <input type="radio" name="rps" value="rock" class="none">
+                    <div class="rock">ROCK</div>
+                </label>
+
+                <label>
+                    <input type="radio" name="rps" value="paper" class="none">
+                    <div class="paper">PAPER</div>
+
+                </label>
+
+                <label>
+                    <input type="radio" name="rps" value="scissors" class="none">
+                    <div class="scissors">SCISSORS</div>
+                </label>
+            </div>
+            
+            <div class="button">
+                <button id="submit-button">Shoot!</button>
+            </div> 
+        </section>
+
+        <section class="results none">
+            <p>The computer chose <span id="computer-throw"></span>.</p>
+            <div id="outcome"></div>
+            <div id="stats">
+                <span>Number of times you won: <span id="win-count"></span></span><br>
+                <span>Number of times you lost: <span id="lose-count"></span></span><br>
+                <span>Number of draws: <span id="draw-count"></span></span>
+            </div>
+        </section>
+    </main>
     
-    <footer></footer>
+    <footer>
+        <div class="button">
+            <button id="reset-button">Reset stats?</button>
+        </div>
+        <div class="none" id="reset-display">Resets: <span id="reset-counter"></span></div>
+    </footer>
 
     <script type="module" src="app.js"></script>
 </body>
