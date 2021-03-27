@@ -23,6 +23,7 @@
   "homepage": "https://github.com/devon-wolf/rock-paper-scissors#readme",
   "dependencies": {
     "@types/qunit": "^2.11.1",
-    "parcel": "^2.0.0-beta.2"
+    "parcel": "^2.0.0-beta.2",
+    "qunit": "^2.14.1"
   }
 }

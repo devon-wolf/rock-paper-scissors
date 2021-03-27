@@ -8,7 +8,7 @@ import {
 } from './displayUtils';
 
 export type Throw = 'rock' | 'paper' | 'scissors';
-type Outcome = 'win' | 'loss' | 'draw';
+export type Outcome = 'win' | 'loss' | 'draw';
 
 // buttons
 const submitButton : HTMLElement = document.getElementById('submit-button');
