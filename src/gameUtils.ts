@@ -1,33 +1,34 @@
-export function getComputerThrow() {
-    return computerThrow(computerThrowCriteria());
-}
-
-// only exports to the tests
-export function computerThrow(value) {
-    if (value === 1) return 'rock';
-    else if (value === 2) return 'paper';
-    else return 'scissors';
-}
+import { Throw } from './app';
 
 function computerThrowCriteria() {
     return Math.ceil(Math.random() * 3);
 }
 
-export function doesUserWin(userThrow, computerThrow) {
-    const drawCheck = checkForDraw(userThrow, computerThrow);
-    const lossCheck = checkForLose(userThrow, computerThrow);
+export function computerThrow(value : number) {
+    if (value === 1) return 'rock';
+    else if (value === 2) return 'paper';
+    else return 'scissors';
+}
+
+export function getComputerThrow() {
+    return computerThrow(computerThrowCriteria());
+}
+
+export function doesUserWin(userThrow : Throw, computerThrow : Throw) {
+    const drawCheck : string = checkForDraw(userThrow, computerThrow);
+    const lossCheck : string = checkForLose(userThrow, computerThrow);
     if (drawCheck) return drawCheck;
     else if (lossCheck) return lossCheck;
     else return 'win';
 }
 
-function checkForDraw(userThrow, computerThrow) {
+function checkForDraw(userThrow : Throw, computerThrow : Throw) {
     if (userThrow === computerThrow) {
         return 'draw';
     }
 }
 
-function checkForLose(userThrow, computerThrow) {
+function checkForLose(userThrow : Throw, computerThrow : Throw) {
     switch (userThrow) {
         case 'rock':
             if (computerThrow === 'paper') return 'loss';

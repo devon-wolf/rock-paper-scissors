@@ -1,0 +1,28 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "I need:\r - styled radio buttons for Rock, Paper, and Scissors\r - button to trigger computer throw\r \t- `computerThrow` function to generate rock, paper, or scissors throw for the computer player\r \t- `doesUserWin` function to figure out if the user's throw beats the computer's throw\r - area to display computer's throw\r - area to display win/lose message\r - area to display recorded wins and losses\r - Global State Items:\r \t- wins\r \t- losses",
+  "main": "index.html",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "parcel serve src/*.html --open",
+    "test": "parcel serve src/test/*.html --open",
+    "build": "parcel build src/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devon-wolf/rock-paper-scissors.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devon-wolf/rock-paper-scissors/issues"
+  },
+  "homepage": "https://github.com/devon-wolf/rock-paper-scissors#readme",
+  "dependencies": {
+    "@types/qunit": "^2.11.1",
+    "parcel": "^2.0.0-beta.2"
+  }
+}
